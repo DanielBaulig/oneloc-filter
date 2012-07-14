@@ -1,7 +1,7 @@
 filename filter in one loc
 ===
 
-This small script is the result of a bet about if I would be able to write a program that would filter filenames from bad words which should be specifiable through a file.
+This small script is the result of a bet about if it is possible to write a program that removes blacklisted words from filenames in a single line of code.
 
 # Tests
 
