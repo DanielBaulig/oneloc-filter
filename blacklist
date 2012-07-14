@@ -1,0 +1,6 @@
+# put each word or phrase onto a seperate line
+# words are inserted into a regular expression
+# thus using regexes here is possible
+
+bad # filter the word 'bad'
+s[ia]mple # filter the words 'simple' and 'sample'
