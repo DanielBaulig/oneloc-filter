@@ -3,4 +3,4 @@
 # thus using regexes here is possible
 
 bad:good # replace the word 'bad' with 'good'
-s[ia]mple # filter the words 'simple' and 'sample'
+s[ia]mple[ ]? # filter the words 'simple' and 'sample', aswell as a possible whitespace
