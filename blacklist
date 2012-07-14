@@ -2,5 +2,5 @@
 # words are inserted into a regular expression
 # thus using regexes here is possible
 
-bad # filter the word 'bad'
+bad:good # replace the word 'bad' with 'good'
 s[ia]mple # filter the words 'simple' and 'sample'
