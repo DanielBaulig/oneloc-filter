@@ -9,4 +9,4 @@
 # with specific replacement words. It could still remain a 
 # one-liner for that, allthough it might get about 50% longer.
 
-BLACKLIST=$(sed -e 's/#.*$//' blacklist | grep -v '^$' | paste -sd '|' -) find $1 -type f -exec sh -c 'f="{}";filtered=$(echo "$f" | sed -r "s/($BLACKLIST)[[:space:]]*//g" | sed -r "s/[[:space:]]*$//"); [ "$f" != "$filtered" ] && mv -v "$f" "$filtered"' \;
+BLACKLIST=$(sed -e 's/#.*//' -e 's/[ ^I]*$//' -e '/^$/ d' blacklist | paste -sd '|' -) find $1 -type f -exec sh -c 'f="{}";filtered=$(echo "$f" | sed -r "s/($BLACKLIST)[ ^I]*//g;s/[ ^I]*$//"); [ "$f" != "$filtered" ] && mv -v "$f" "$filtered"' \;
